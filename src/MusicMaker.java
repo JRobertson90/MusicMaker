@@ -12,8 +12,8 @@ class MusicMaker {
         MidiChannel[] channels = synth.getChannels();
         Thread.sleep(1000); // Give it time to load everything
 
-        InstrumentTrack bass = new InstrumentTrack(channels[1], 1, "bass.txt");
-        InstrumentTrack melody = new InstrumentTrack(channels[0], 9, "melody.txt");
+        InstrumentTrack bass = new InstrumentTrack(channels[1], 1, "tracks/bass.txt");
+        InstrumentTrack melody = new InstrumentTrack(channels[0], 9, "tracks/melody.txt");
 
         executor.submit(melody);
         executor.submit(bass);
