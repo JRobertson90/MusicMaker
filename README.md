@@ -11,10 +11,10 @@ Legend:
 - Place an X to play a note
 - Place a space to avoid playing anything at all
 
-Example:
+Example:  
 
+Jingle Bells:
 <pre>
-Jingle bells:  
 60|    |    |  X |    |    |    |    |    |    |    |  X |    |    |    |    |X   |  
 62|    |    |   X|    |    |    | XX |X   |    |    |   X|    |    |    |   X|    |  
 64|XXX |XXX |X   |X   |    | XXX|X  X|    |XXX |XXX |X   |X   |    | XXX|    |    |  
