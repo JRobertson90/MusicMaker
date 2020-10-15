@@ -1,5 +1,0 @@
-60|  X                 X         X-
-62| X X    XXX--      X X    XX X
-64|X   XXX-     X    X   XXXX  X
-67|              XX--
-72|                                X-

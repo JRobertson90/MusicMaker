@@ -1,4 +1,4 @@
-# com.example.MusicMaker
+# MusicMaker
 A simple program to make music
 
 ## Creating an instrument track
