@@ -1,0 +1,13 @@
+{
+  "title": "Jingle Bells",
+  "tracks": [
+    {
+      "filePath": "bass.txt",
+      "instrumentNumber": 2
+    },
+    {
+      "filePath": "melody.txt",
+      "instrumentNumber": 2
+    }
+  ]
+}
