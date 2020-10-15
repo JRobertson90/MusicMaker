@@ -21,9 +21,48 @@ public class InstrumentTrack extends Track {
         Scanner fileReader = new Scanner(file);
         while (fileReader.hasNextLine()) {
             String line = fileReader.nextLine();
-            int note = Integer.parseInt(line.substring(0, 2));
-            String musicline = line.substring(2);
-            noteTracks.add(new NoteTrack(channel, instrumentNumber, note, musicline));
+            String note = line.substring(0, 3);
+            int midiValue;
+            if (note.matches(".*[A-Ga-g].*")) {
+                midiValue = Character.getNumericValue(note.charAt(2) + 1) * 12;
+
+                char letter = note.charAt(0);
+                switch (letter) {
+                    case 'C':
+                        break;
+                    case 'D':
+                        midiValue += 2;
+                        break;
+                    case 'E':
+                        midiValue += 4;
+                        break;
+                    case 'F':
+                        midiValue += 5;
+                        break;
+                    case 'G':
+                        midiValue += 7;
+                        break;
+                    case 'A':
+                        midiValue += 9;
+                        break;
+                    case 'B':
+                        midiValue += 11;
+                        break;
+                    default:
+                        System.out.print("Not a musical note (character other than A through G): " + letter);
+                }
+
+                if (note.charAt(1) == 'F') {
+                    midiValue -= 1;
+                } else if (note.charAt(1) == 'S') {
+                    midiValue += 1;
+                }
+            } else {
+                midiValue = Integer.parseInt(note.trim());
+            }
+
+            String musicline = line.substring(3);
+            noteTracks.add(new NoteTrack(channel, instrumentNumber, midiValue, musicline));
         }
     }
 
